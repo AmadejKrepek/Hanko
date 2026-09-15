@@ -1,7 +1,10 @@
 .admin-login {
     min-height: 100vh;
+    min-height: 100dvh;
     display: grid;
     place-items: center;
+    padding: 16px;
+    padding: max(16px, env(safe-area-inset-top)) 16px max(16px, env(safe-area-inset-bottom));
     background:
         linear-gradient(180deg, rgba(23,48,42,.55), rgba(23,48,42,.75)),
         url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80") center/cover;
@@ -49,5 +52,35 @@ th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--lin
 
 @media (max-width: 960px) {
     .admin-body { grid-template-columns: 1fr; }
+    .admin-side {
+        flex-direction: row;
+        align-items: center;
+        gap: 14px;
+        padding: 12px 14px;
+        padding-top: calc(12px + env(safe-area-inset-top));
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .admin-side nav {
+        display: flex;
+        grid: none;
+        flex-direction: row;
+        gap: 6px;
+    }
+    .admin-side nav a {
+        flex-shrink: 0;
+        white-space: nowrap;
+        min-height: 40px;
+        display: flex;
+        align-items: center;
+    }
     .admin-form, .stat-grid, .admin-split, .mini-apts { grid-template-columns: 1fr; }
+    .admin-content { padding: 16px; padding-bottom: calc(24px + env(safe-area-inset-bottom)); }
+    .admin-top { padding: 16px 16px 0; }
+    .admin-top h1 { font-size: 1.45rem; }
+    .table-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    table { min-width: 720px; }
 }

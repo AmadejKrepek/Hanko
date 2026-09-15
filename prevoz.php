@@ -71,7 +71,7 @@ require __DIR__ . '/includes/header.php';
                     </label>
                     <label>
                         <span>Otroci</span>
-                        <input type="number" name="children" min="0" max="6" value="0">
+                        <input type="number" name="child_count" min="0" max="6" value="0">
                     </label>
                     <label>
                         <span>Kosi prtljage</span>

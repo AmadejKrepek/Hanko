@@ -13,7 +13,8 @@ $pageDescription = $pageDescription ?? SITE_TAGLINE;
 <html lang="sl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#234139">
     <title><?= h($pageTitle) ?></title>
     <meta name="description" content="<?= h($pageDescription) ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,10 +32,11 @@ $pageDescription = $pageDescription ?? SITE_TAGLINE;
                 <em>Apartmaji</em>
             </span>
         </a>
-        <button class="nav-toggle" type="button" aria-label="Meni" data-nav-toggle>
+        <button class="nav-toggle" type="button" aria-label="Odpri meni" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
             <span></span><span></span><span></span>
         </button>
-        <nav class="site-nav" data-nav>
+        <div class="nav-overlay" data-nav-overlay hidden></div>
+        <nav class="site-nav" id="site-nav" data-nav>
             <a href="<?= h(base_url('index.php#apartmaji')) ?>" class="<?= $currentPage === 'home' ? 'is-active' : '' ?>">Apartmaji</a>
             <a href="<?= h(base_url('razpolozljivost.php')) ?>" class="<?= $currentPage === 'calendar' ? 'is-active' : '' ?>">Razpoložljivost</a>
             <a href="<?= h(base_url('prevoz.php')) ?>" class="<?= $currentPage === 'transfer' ? 'is-active' : '' ?>">Prevoz</a>

@@ -46,7 +46,7 @@ if ($action === 'create') {
     $dateReturn = trim((string) ($data['date_return'] ?? ''));
     $timeReturn = trim((string) ($data['time_return'] ?? ''));
     $passengers = max(1, (int) ($data['passengers'] ?? 1));
-    $children = max(0, (int) ($data['children'] ?? 0));
+    $children = max(0, (int) ($data['child_count'] ?? $data['children'] ?? 0));
     $luggage = max(0, (int) ($data['luggage'] ?? 1));
     $flightNumber = trim((string) ($data['flight_number'] ?? ''));
     $firstName = trim((string) ($data['first_name'] ?? 'Gost'));

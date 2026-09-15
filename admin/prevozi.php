@@ -47,7 +47,7 @@ require __DIR__ . '/includes/header.php';
         <label>Vrnitev datum <input type="date" name="date_return"></label>
         <label>Vrnitev ura <input type="time" name="time_return"></label>
         <label>Potniki <input type="number" name="passengers" min="1" max="8" value="2"></label>
-        <label>Otroci <input type="number" name="children" min="0" value="0"></label>
+        <label>Otroci <input type="number" name="child_count" min="0" value="0"></label>
         <label>Prtljaga <input type="number" name="luggage" min="0" value="2"></label>
         <label>Št. leta <input type="text" name="flight_number"></label>
         <label>Ime <input type="text" name="first_name" required></label>
