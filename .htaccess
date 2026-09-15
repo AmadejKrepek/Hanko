@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^(data|\.env)(/|$) - [F,L]
+RewriteRule \.(sqlite|sqlite-journal|sqlite-wal)$ - [F,L]
+
+# Serve existing files and directories as-is.
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Pretty admin URL
+RewriteRule ^admin/?$ admin/index.php [L,QSA]

@@ -1,0 +1,13 @@
+.git
+.gitignore
+data/*.sqlite
+data/*.sqlite-journal
+data/*.sqlite-wal
+data/mail/*.html
+.DS_Store
+agent-transcripts
+terminals
+*.md
+.env
+.env.*
+!/.env.example

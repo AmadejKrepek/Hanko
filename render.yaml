@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: hanko-apartmaji
+    runtime: docker
+    plan: starter
+    healthCheckPath: /health.php
+    envVars:
+      - key: HANKO_ADMIN_USER
+        value: admin
+      - key: HANKO_ADMIN_PASS
+        generateValue: true
+      - key: HANKO_SITE_EMAIL
+        value: info@hanko-apartmaji.si
+      - key: HANKO_ADMIN_EMAIL
+        value: info@hanko-apartmaji.si
+      - key: HANKO_SHOW_ADMIN_HINT
+        value: "0"

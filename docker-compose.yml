@@ -1,0 +1,16 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      PORT: "8080"
+      HANKO_DATA_PATH: /var/www/html/data
+      HANKO_SHOW_ADMIN_HINT: "1"
+      HANKO_ADMIN_USER: admin
+      HANKO_ADMIN_PASS: HankoAdmin2026!
+    volumes:
+      - hanko-data:/var/www/html/data
+
+volumes:
+  hanko-data:
